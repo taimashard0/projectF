@@ -1,0 +1,968 @@
+{
+  "about": "NASA Artemis III candidate landing regions (Oct 2024 down-select). outline = list of [lat, lon] rings. point = engine-selected site.",
+  "regions": [
+    {
+      "id": "haworth",
+      "name": "Haworth",
+      "source": "USGS Astrogeology, McClernan (2024), Down Selected Artemis III Candidate Landing Site Navigational Grids, doi:10.5066/P1MEQ6UK",
+      "files": [
+        "A3_9regions-lonlat-simplified.shp"
+      ],
+      "area_km2": 888.0,
+      "official_area_km2": 888.04,
+      "centroid": [
+        -86.76394,
+        -22.77702
+      ],
+      "outline": [
+        [
+          [
+            -86.1124,
+            -26.65197
+          ],
+          [
+            -86.44277,
+            -12.36178
+          ],
+          [
+            -87.39353,
+            -16.99082
+          ],
+          [
+            -86.95784,
+            -34.98185
+          ],
+          [
+            -86.1124,
+            -26.65197
+          ]
+        ]
+      ],
+      "namesake": {
+        "name": "Haworth crater",
+        "lat": -86.9,
+        "lon": -4.0,
+        "diameter_km": 51.4,
+        "distance_km": 31.6
+      },
+      "point": [
+        -86.93985,
+        -24.43885
+      ],
+      "selection": {
+        "rule": "inside the region, mean slope <= 5 deg over a 100 m radius (HLS-RQMT-001) everywhere on a 100 m landing circle, roughness (LOLA ROUGH_100M) no higher than the region median of slope-safe ground; ranked by the WORST % sunlit on the landing circle. 500 m screen, 100 m local search, full resolution at the best 3 centres",
+        "candidates": 3481,
+        "candidates_slope_ok": 407,
+        "candidates_smooth": 204,
+        "region_rough_median_m": 0.516,
+        "chosen_rough_m": 0.469,
+        "chosen_slope_mean_deg": 3.26,
+        "chosen_circle_slope_max_deg": 4.88,
+        "chosen_circle_min_sunlit_screen": 49.98,
+        "chosen_circle_mean_sunlit_screen": 50.96,
+        "chosen_pct_sunlit_screen": 51.73,
+        "chosen_full": {
+          "pct_sunlit": 51.35,
+          "pct_dte": 54.22,
+          "longest_shadow_h": 387.5
+        },
+        "best_single_pixel_screen": {
+          "lat": -86.99412,
+          "lon": -24.28792,
+          "pct_sunlit": 65.72
+        },
+        "finalists": [
+          {
+            "lat": -86.93985,
+            "lon": -24.43885,
+            "circle_min_sunlit_screen": 49.98,
+            "pct_sunlit": 51.35,
+            "pct_dte": 54.22,
+            "longest_shadow_h": 387.5
+          },
+          {
+            "lat": -87.04866,
+            "lon": -24.27444,
+            "circle_min_sunlit_screen": 49.31,
+            "pct_sunlit": 56.86,
+            "pct_dte": 50.54,
+            "longest_shadow_h": 565.5
+          },
+          {
+            "lat": -86.93191,
+            "lon": -23.09349,
+            "circle_min_sunlit_screen": 49.14,
+            "pct_sunlit": 58.91,
+            "pct_dte": 57.19,
+            "longest_shadow_h": 472.5
+          }
+        ],
+        "centre": {
+          "lat": -86.76394,
+          "lon": -22.77702,
+          "elev_m": 1628.0,
+          "slope_mean_deg": 3.97,
+          "pct_sunlit": 10.84,
+          "pct_dte": 39.98,
+          "longest_shadow_h": 3533.5
+        }
+      }
+    },
+    {
+      "id": "malapert-massif",
+      "name": "Malapert Massif",
+      "source": "USGS Astrogeology, McClernan (2024), Down Selected Artemis III Candidate Landing Site Navigational Grids, doi:10.5066/P1MEQ6UK",
+      "files": [
+        "A3_9regions-lonlat-simplified.shp"
+      ],
+      "area_km2": 441.0,
+      "official_area_km2": 441.0,
+      "centroid": [
+        -85.99478,
+        -0.23578
+      ],
+      "outline": [
+        [
+          [
+            -85.63395,
+            -4.76364
+          ],
+          [
+            -85.63656,
+            4.33231
+          ],
+          [
+            -86.32589,
+            5.14788
+          ],
+          [
+            -86.32279,
+            -5.65948
+          ],
+          [
+            -85.63395,
+            -4.76364
+          ]
+        ]
+      ],
+      "namesake": {
+        "name": "Malapert crater",
+        "lat": -84.9,
+        "lon": 12.9,
+        "diameter_km": 69.0,
+        "distance_km": 45.7
+      },
+      "point": [
+        -85.99231,
+        2.02691
+      ],
+      "selection": {
+        "rule": "inside the region, mean slope <= 5 deg over a 100 m radius (HLS-RQMT-001) everywhere on a 100 m landing circle, roughness (LOLA ROUGH_100M) no higher than the region median of slope-safe ground; ranked by the WORST % sunlit on the landing circle. 500 m screen, 100 m local search, full resolution at the best 3 centres",
+        "candidates": 1763,
+        "candidates_slope_ok": 49,
+        "candidates_smooth": 25,
+        "region_rough_median_m": 0.592,
+        "chosen_rough_m": 0.48,
+        "chosen_slope_mean_deg": 3.14,
+        "chosen_circle_slope_max_deg": 4.81,
+        "chosen_circle_min_sunlit_screen": 54.06,
+        "chosen_circle_mean_sunlit_screen": 69.29,
+        "chosen_pct_sunlit_screen": 72.07,
+        "chosen_full": {
+          "pct_sunlit": 71.18,
+          "pct_dte": 67.89,
+          "longest_shadow_h": 406.5
+        },
+        "best_single_pixel_screen": {
+          "lat": -85.9922,
+          "lon": 2.074,
+          "pct_sunlit": 73.03
+        },
+        "finalists": [
+          {
+            "lat": -85.99231,
+            "lon": 2.02691,
+            "circle_min_sunlit_screen": 54.06,
+            "pct_sunlit": 71.18,
+            "pct_dte": 67.89,
+            "longest_shadow_h": 406.5
+          },
+          {
+            "lat": -85.81954,
+            "lon": 3.39034,
+            "circle_min_sunlit_screen": 49.61,
+            "pct_sunlit": 50.94,
+            "pct_dte": 76.95,
+            "longest_shadow_h": 389.5
+          },
+          {
+            "lat": -85.829,
+            "lon": 3.48877,
+            "circle_min_sunlit_screen": 43.59,
+            "pct_sunlit": 48.31,
+            "pct_dte": 99.38,
+            "longest_shadow_h": 402.5
+          }
+        ],
+        "centre": {
+          "lat": -85.99478,
+          "lon": -0.23578,
+          "elev_m": 4784.2,
+          "slope_mean_deg": 5.09,
+          "pct_sunlit": 21.19,
+          "pct_dte": 48.63,
+          "longest_shadow_h": 3494.5
+        }
+      }
+    },
+    {
+      "id": "mons-mouton",
+      "name": "Mons Mouton",
+      "source": "USGS Astrogeology, McClernan (2024), Down Selected Artemis III Candidate Landing Site Navigational Grids, doi:10.5066/P1MEQ6UK",
+      "files": [
+        "A3_9regions-lonlat-simplified.shp"
+      ],
+      "area_km2": 256.0,
+      "official_area_km2": 256.0,
+      "centroid": [
+        -85.42658,
+        31.74276
+      ],
+      "outline": [
+        [
+          [
+            -85.32705,
+            27.28799
+          ],
+          [
+            -85.0633,
+            32.73523
+          ],
+          [
+            -85.49737,
+            36.36658
+          ],
+          [
+            -85.78834,
+            30.57923
+          ],
+          [
+            -85.32705,
+            27.28799
+          ]
+        ]
+      ],
+      "namesake": {
+        "name": "Mons Mouton high point",
+        "lat": -84.6,
+        "lon": 31.0,
+        "diameter_km": 50.0,
+        "distance_km": 25.2
+      },
+      "point": [
+        -85.46879,
+        30.94946
+      ],
+      "selection": {
+        "rule": "inside the region, mean slope <= 5 deg over a 100 m radius (HLS-RQMT-001) everywhere on a 100 m landing circle, roughness (LOLA ROUGH_100M) no higher than the region median of slope-safe ground; ranked by the WORST % sunlit on the landing circle. 500 m screen, 100 m local search, full resolution at the best 3 centres",
+        "candidates": 1017,
+        "candidates_slope_ok": 94,
+        "candidates_smooth": 47,
+        "region_rough_median_m": 0.466,
+        "chosen_rough_m": 0.445,
+        "chosen_slope_mean_deg": 4.83,
+        "chosen_circle_slope_max_deg": 4.83,
+        "chosen_circle_min_sunlit_screen": 48.38,
+        "chosen_circle_mean_sunlit_screen": 49.96,
+        "chosen_pct_sunlit_screen": 50.22,
+        "chosen_full": {
+          "pct_sunlit": 50.02,
+          "pct_dte": 74.52,
+          "longest_shadow_h": 435.5
+        },
+        "best_single_pixel_screen": {
+          "lat": -85.47274,
+          "lon": 31.02814,
+          "pct_sunlit": 57.81
+        },
+        "finalists": [
+          {
+            "lat": -85.46879,
+            "lon": 30.94946,
+            "circle_min_sunlit_screen": 48.38,
+            "pct_sunlit": 50.02,
+            "pct_dte": 74.52,
+            "longest_shadow_h": 435.5
+          },
+          {
+            "lat": -85.46088,
+            "lon": 31.03511,
+            "circle_min_sunlit_screen": 45.2,
+            "pct_sunlit": 50.79,
+            "pct_dte": 68.62,
+            "longest_shadow_h": 466.0
+          },
+          {
+            "lat": -85.24907,
+            "lon": 30.657,
+            "circle_min_sunlit_screen": 43.53,
+            "pct_sunlit": 44.52,
+            "pct_dte": 81.24,
+            "longest_shadow_h": 426.0
+          }
+        ],
+        "centre": {
+          "lat": -85.42658,
+          "lon": 31.74276,
+          "elev_m": 6398.7,
+          "slope_mean_deg": 7.89,
+          "pct_sunlit": 20.91,
+          "pct_dte": 37.97,
+          "longest_shadow_h": 4028.5
+        }
+      }
+    },
+    {
+      "id": "mons-mouton-plateau",
+      "name": "Mons Mouton Plateau",
+      "source": "USGS Astrogeology, McClernan (2024), Down Selected Artemis III Candidate Landing Site Navigational Grids, doi:10.5066/P1MEQ6UK",
+      "files": [
+        "A3_9regions-lonlat-simplified.shp"
+      ],
+      "area_km2": 4451.8,
+      "official_area_km2": 4451.83602,
+      "centroid": [
+        -84.3347,
+        30.59227
+      ],
+      "outline": [
+        [
+          [
+            -83.9502,
+            15.49417
+          ],
+          [
+            -82.84671,
+            35.44246
+          ],
+          [
+            -84.28934,
+            46.61204
+          ],
+          [
+            -85.75564,
+            22.39284
+          ],
+          [
+            -83.9502,
+            15.49417
+          ]
+        ]
+      ],
+      "namesake": {
+        "name": "Mons Mouton high point",
+        "lat": -84.6,
+        "lon": 31.0,
+        "diameter_km": 50.0,
+        "distance_km": 8.2
+      },
+      "point": [
+        -84.66966,
+        25.86049
+      ],
+      "selection": {
+        "rule": "inside the region, mean slope <= 5 deg over a 100 m radius (HLS-RQMT-001) everywhere on a 100 m landing circle, roughness (LOLA ROUGH_100M) no higher than the region median of slope-safe ground; ranked by the WORST % sunlit on the landing circle. 500 m screen, 100 m local search, full resolution at the best 3 centres",
+        "candidates": 17595,
+        "candidates_slope_ok": 2378,
+        "candidates_smooth": 1189,
+        "region_rough_median_m": 0.47,
+        "chosen_rough_m": 0.331,
+        "chosen_slope_mean_deg": 3.02,
+        "chosen_circle_slope_max_deg": 4.83,
+        "chosen_circle_min_sunlit_screen": 54.54,
+        "chosen_circle_mean_sunlit_screen": 56.01,
+        "chosen_pct_sunlit_screen": 55.24,
+        "chosen_full": {
+          "pct_sunlit": 54.79,
+          "pct_dte": 100.0,
+          "longest_shadow_h": 365.0
+        },
+        "best_single_pixel_screen": {
+          "lat": -84.91582,
+          "lon": 38.12922,
+          "pct_sunlit": 72.55
+        },
+        "finalists": [
+          {
+            "lat": -84.66966,
+            "lon": 25.86049,
+            "circle_min_sunlit_screen": 54.54,
+            "pct_sunlit": 54.79,
+            "pct_dte": 100.0,
+            "longest_shadow_h": 365.0
+          },
+          {
+            "lat": -85.03451,
+            "lon": 35.10908,
+            "circle_min_sunlit_screen": 53.1,
+            "pct_sunlit": 56.7,
+            "pct_dte": 73.46,
+            "longest_shadow_h": 381.5
+          },
+          {
+            "lat": -84.28683,
+            "lon": 45.02337,
+            "circle_min_sunlit_screen": 52.28,
+            "pct_sunlit": 57.95,
+            "pct_dte": 64.92,
+            "longest_shadow_h": 392.0
+          }
+        ],
+        "centre": {
+          "lat": -84.3347,
+          "lon": 30.59227,
+          "elev_m": 5248.7,
+          "slope_mean_deg": 4.59,
+          "pct_sunlit": 24.61,
+          "pct_dte": 62.07,
+          "longest_shadow_h": 595.0
+        }
+      }
+    },
+    {
+      "id": "nobile-rim-1",
+      "name": "Nobile Rim 1",
+      "source": "USGS Astrogeology, McClernan (2024), Down Selected Artemis III Candidate Landing Site Navigational Grids, doi:10.5066/P1MEQ6UK",
+      "files": [
+        "A3_9regions-lonlat-simplified.shp"
+      ],
+      "area_km2": 400.0,
+      "official_area_km2": 400.0,
+      "centroid": [
+        -85.4364,
+        37.34704
+      ],
+      "outline": [
+        [
+          [
+            -85.3514,
+            31.64367
+          ],
+          [
+            -84.9746,
+            38.05472
+          ],
+          [
+            -85.47479,
+            43.20663
+          ],
+          [
+            -85.89749,
+            36.47997
+          ],
+          [
+            -85.3514,
+            31.64367
+          ]
+        ]
+      ],
+      "namesake": {
+        "name": "Nobile crater",
+        "lat": -85.28,
+        "lon": 53.27,
+        "diameter_km": 79.27,
+        "distance_km": 39.3
+      },
+      "point": [
+        -85.29037,
+        36.89918
+      ],
+      "selection": {
+        "rule": "inside the region, mean slope <= 5 deg over a 100 m radius (HLS-RQMT-001) everywhere on a 100 m landing circle, roughness (LOLA ROUGH_100M) no higher than the region median of slope-safe ground; ranked by the WORST % sunlit on the landing circle. 500 m screen, 100 m local search, full resolution at the best 3 centres",
+        "candidates": 1599,
+        "candidates_slope_ok": 97,
+        "candidates_smooth": 49,
+        "region_rough_median_m": 0.485,
+        "chosen_rough_m": 0.331,
+        "chosen_slope_mean_deg": 3.15,
+        "chosen_circle_slope_max_deg": 4.23,
+        "chosen_circle_min_sunlit_screen": 55.48,
+        "chosen_circle_mean_sunlit_screen": 61.26,
+        "chosen_pct_sunlit_screen": 58.03,
+        "chosen_full": {
+          "pct_sunlit": 57.92,
+          "pct_dte": 68.98,
+          "longest_shadow_h": 372.5
+        },
+        "best_single_pixel_screen": {
+          "lat": -85.293,
+          "lon": 36.92327,
+          "pct_sunlit": 73.19
+        },
+        "finalists": [
+          {
+            "lat": -85.29037,
+            "lon": 36.89918,
+            "circle_min_sunlit_screen": 55.48,
+            "pct_sunlit": 57.92,
+            "pct_dte": 68.98,
+            "longest_shadow_h": 372.5
+          },
+          {
+            "lat": -85.24164,
+            "lon": 36.75601,
+            "circle_min_sunlit_screen": 52.82,
+            "pct_sunlit": 62.39,
+            "pct_dte": 70.92,
+            "longest_shadow_h": 324.0
+          },
+          {
+            "lat": -85.27654,
+            "lon": 36.92308,
+            "circle_min_sunlit_screen": 52.78,
+            "pct_sunlit": 64.07,
+            "pct_dte": 65.26,
+            "longest_shadow_h": 377.0
+          }
+        ],
+        "centre": {
+          "lat": -85.4364,
+          "lon": 37.34704,
+          "elev_m": 5942.8,
+          "slope_mean_deg": 15.12,
+          "pct_sunlit": 29.97,
+          "pct_dte": 31.48,
+          "longest_shadow_h": 517.5
+        }
+      }
+    },
+    {
+      "id": "nobile-rim-2",
+      "name": "Nobile Rim 2",
+      "source": "USGS Astrogeology, McClernan (2024), Down Selected Artemis III Candidate Landing Site Navigational Grids, doi:10.5066/P1MEQ6UK",
+      "files": [
+        "A3_9regions-lonlat-simplified.shp"
+      ],
+      "area_km2": 400.0,
+      "official_area_km2": 400.0,
+      "centroid": [
+        -83.95405,
+        58.82155
+      ],
+      "outline": [
+        [
+          [
+            -84.04797,
+            54.46179
+          ],
+          [
+            -83.50158,
+            57.8402
+          ],
+          [
+            -83.82638,
+            63.02425
+          ],
+          [
+            -84.40465,
+            59.96161
+          ],
+          [
+            -84.04797,
+            54.46179
+          ]
+        ]
+      ],
+      "namesake": {
+        "name": "Nobile crater",
+        "lat": -85.28,
+        "lon": 53.27,
+        "diameter_km": 79.27,
+        "distance_km": 43.2
+      },
+      "point": [
+        -83.57512,
+        58.84431
+      ],
+      "selection": {
+        "rule": "inside the region, mean slope <= 5 deg over a 100 m radius (HLS-RQMT-001) everywhere on a 100 m landing circle, roughness (LOLA ROUGH_100M) no higher than the region median of slope-safe ground; ranked by the WORST % sunlit on the landing circle. 500 m screen, 100 m local search, full resolution at the best 3 centres",
+        "candidates": 1589,
+        "candidates_slope_ok": 229,
+        "candidates_smooth": 115,
+        "region_rough_median_m": 0.486,
+        "chosen_rough_m": 0.331,
+        "chosen_slope_mean_deg": 1.67,
+        "chosen_circle_slope_max_deg": 2.55,
+        "chosen_circle_min_sunlit_screen": 48.64,
+        "chosen_circle_mean_sunlit_screen": 49.36,
+        "chosen_pct_sunlit_screen": 49.84,
+        "chosen_full": {
+          "pct_sunlit": 49.78,
+          "pct_dte": 67.66,
+          "longest_shadow_h": 408.0
+        },
+        "best_single_pixel_screen": {
+          "lat": -83.67875,
+          "lon": 59.42496,
+          "pct_sunlit": 51.54
+        },
+        "finalists": [
+          {
+            "lat": -83.57512,
+            "lon": 58.84431,
+            "circle_min_sunlit_screen": 48.64,
+            "pct_sunlit": 49.78,
+            "pct_dte": 67.66,
+            "longest_shadow_h": 408.0
+          },
+          {
+            "lat": -83.57001,
+            "lon": 58.76895,
+            "circle_min_sunlit_screen": 48.64,
+            "pct_sunlit": 49.9,
+            "pct_dte": 75.98,
+            "longest_shadow_h": 402.0
+          },
+          {
+            "lat": -83.58022,
+            "lon": 58.91979,
+            "circle_min_sunlit_screen": 47.72,
+            "pct_sunlit": 49.06,
+            "pct_dte": 63.43,
+            "longest_shadow_h": 423.0
+          }
+        ],
+        "centre": {
+          "lat": -83.95405,
+          "lon": 58.82155,
+          "elev_m": 1009.4,
+          "slope_mean_deg": 4.56,
+          "pct_sunlit": 40.88,
+          "pct_dte": 64.32,
+          "longest_shadow_h": 445.5
+        }
+      }
+    },
+    {
+      "id": "de-gerlache-rim-2",
+      "name": "de Gerlache Rim 2",
+      "source": "USGS Astrogeology, McClernan (2024), Down Selected Artemis III Candidate Landing Site Navigational Grids, doi:10.5066/P1MEQ6UK",
+      "files": [
+        "A3_9regions-lonlat-simplified.shp"
+      ],
+      "area_km2": 400.0,
+      "official_area_km2": 400.0,
+      "centroid": [
+        -88.22998,
+        -64.62844
+      ],
+      "outline": [
+        [
+          [
+            -88.02393,
+            -77.47119
+          ],
+          [
+            -87.78529,
+            -60.57254
+          ],
+          [
+            -88.32789,
+            -49.39871
+          ],
+          [
+            -88.65999,
+            -71.34211
+          ],
+          [
+            -88.02393,
+            -77.47119
+          ]
+        ]
+      ],
+      "namesake": {
+        "name": "de Gerlache crater",
+        "lat": -88.5,
+        "lon": -87.1,
+        "diameter_km": 32.4,
+        "distance_km": 20.9
+      },
+      "point": [
+        -88.14076,
+        -71.59719
+      ],
+      "selection": {
+        "rule": "inside the region, mean slope <= 5 deg over a 100 m radius (HLS-RQMT-001) everywhere on a 100 m landing circle, roughness (LOLA ROUGH_100M) no higher than the region median of slope-safe ground; ranked by the WORST % sunlit on the landing circle. 500 m screen, 100 m local search, full resolution at the best 3 centres",
+        "candidates": 1564,
+        "candidates_slope_ok": 144,
+        "candidates_smooth": 72,
+        "region_rough_median_m": 0.452,
+        "chosen_rough_m": 0.39,
+        "chosen_slope_mean_deg": 1.5,
+        "chosen_circle_slope_max_deg": 2.68,
+        "chosen_circle_min_sunlit_screen": 53.48,
+        "chosen_circle_mean_sunlit_screen": 55.86,
+        "chosen_pct_sunlit_screen": 57.17,
+        "chosen_full": {
+          "pct_sunlit": 56.74,
+          "pct_dte": 55.02,
+          "longest_shadow_h": 452.0
+        },
+        "best_single_pixel_screen": {
+          "lat": -88.59464,
+          "lon": -67.94894,
+          "pct_sunlit": 64.46
+        },
+        "finalists": [
+          {
+            "lat": -88.14076,
+            "lon": -71.59719,
+            "circle_min_sunlit_screen": 53.48,
+            "pct_sunlit": 56.74,
+            "pct_dte": 55.02,
+            "longest_shadow_h": 452.0
+          },
+          {
+            "lat": -88.44249,
+            "lon": -62.51265,
+            "circle_min_sunlit_screen": 44.37,
+            "pct_sunlit": 50.45,
+            "pct_dte": 55.37,
+            "longest_shadow_h": 484.5
+          },
+          {
+            "lat": -88.09723,
+            "lon": -75.24128,
+            "circle_min_sunlit_screen": 43.51,
+            "pct_sunlit": 53.29,
+            "pct_dte": 50.16,
+            "longest_shadow_h": 429.0
+          }
+        ],
+        "centre": {
+          "lat": -88.22998,
+          "lon": -64.62844,
+          "elev_m": -88.4,
+          "slope_mean_deg": 11.03,
+          "pct_sunlit": 36.47,
+          "pct_dte": 51.07,
+          "longest_shadow_h": 507.0
+        }
+      }
+    },
+    {
+      "id": "slater-plain",
+      "name": "Slater Plain",
+      "source": "USGS Astrogeology, McClernan (2024), Down Selected Artemis III Candidate Landing Site Navigational Grids, doi:10.5066/P1MEQ6UK",
+      "files": [
+        "A3_9regions-lonlat-simplified.shp"
+      ],
+      "area_km2": 399.8,
+      "official_area_km2": 399.800025,
+      "centroid": [
+        -87.16371,
+        125.53768
+      ],
+      "outline": [
+        [
+          [
+            -87.20229,
+            134.99761
+          ],
+          [
+            -87.62216,
+            123.69062
+          ],
+          [
+            -87.05106,
+            116.5672
+          ],
+          [
+            -86.70324,
+            126.86961
+          ],
+          [
+            -87.20229,
+            134.99761
+          ]
+        ]
+      ],
+      "namesake": {
+        "name": "Slater crater",
+        "lat": -88.08,
+        "lon": 111.29,
+        "diameter_km": 25.12,
+        "distance_km": 32.9
+      },
+      "point": [
+        -87.27937,
+        127.90909
+      ],
+      "selection": {
+        "rule": "inside the region, mean slope <= 5 deg over a 100 m radius (HLS-RQMT-001) everywhere on a 100 m landing circle, roughness (LOLA ROUGH_100M) no higher than the region median of slope-safe ground; ranked by the WORST % sunlit on the landing circle. 500 m screen, 100 m local search, full resolution at the best 3 centres",
+        "candidates": 1521,
+        "candidates_slope_ok": 318,
+        "candidates_smooth": 159,
+        "region_rough_median_m": 0.474,
+        "chosen_rough_m": 0.309,
+        "chosen_slope_mean_deg": 1.95,
+        "chosen_circle_slope_max_deg": 4.09,
+        "chosen_circle_min_sunlit_screen": 52.76,
+        "chosen_circle_mean_sunlit_screen": 59.17,
+        "chosen_pct_sunlit_screen": 63.17,
+        "chosen_full": {
+          "pct_sunlit": 62.77,
+          "pct_dte": 46.05,
+          "longest_shadow_h": 385.5
+        },
+        "best_single_pixel_screen": {
+          "lat": -87.23296,
+          "lon": 127.24984,
+          "pct_sunlit": 63.77
+        },
+        "finalists": [
+          {
+            "lat": -87.27937,
+            "lon": 127.90909,
+            "circle_min_sunlit_screen": 52.76,
+            "pct_sunlit": 62.77,
+            "pct_dte": 46.05,
+            "longest_shadow_h": 385.5
+          },
+          {
+            "lat": -87.18931,
+            "lon": 133.23889,
+            "circle_min_sunlit_screen": 51.7,
+            "pct_sunlit": 61.49,
+            "pct_dte": 45.31,
+            "longest_shadow_h": 371.0
+          },
+          {
+            "lat": -87.26575,
+            "lon": 127.59987,
+            "circle_min_sunlit_screen": 50.79,
+            "pct_sunlit": 62.54,
+            "pct_dte": 45.45,
+            "longest_shadow_h": 354.5
+          }
+        ],
+        "centre": {
+          "lat": -87.16371,
+          "lon": 125.53768,
+          "elev_m": -30.9,
+          "slope_mean_deg": 3.38,
+          "pct_sunlit": 1.89,
+          "pct_dte": 37.18,
+          "longest_shadow_h": 5662.5
+        }
+      }
+    },
+    {
+      "id": "peak-near-cabeus-b",
+      "name": "Peak near Cabeus B",
+      "source": "USGS Astrogeology, McClernan (2024), Down Selected Artemis III Candidate Landing Site Navigational Grids, doi:10.5066/P1MEQ6UK",
+      "files": [
+        "A3_9regions-lonlat-simplified.shp"
+      ],
+      "area_km2": 399.8,
+      "official_area_km2": 399.800025,
+      "centroid": [
+        -83.63746,
+        -68.74949
+      ],
+      "outline": [
+        [
+          [
+            -83.2095,
+            -67.16672
+          ],
+          [
+            -83.81001,
+            -64.79989
+          ],
+          [
+            -84.06005,
+            -70.55948
+          ],
+          [
+            -83.43644,
+            -72.47353
+          ],
+          [
+            -83.2095,
+            -67.16672
+          ]
+        ]
+      ],
+      "namesake": {
+        "name": "Cabeus B crater",
+        "lat": -82.4,
+        "lon": -53.0,
+        "diameter_km": 61.0,
+        "distance_km": 69.0
+      },
+      "point": [
+        -83.37501,
+        -67.64218
+      ],
+      "selection": {
+        "rule": "inside the region, mean slope <= 5 deg over a 100 m radius (HLS-RQMT-001) everywhere on a 100 m landing circle, roughness (LOLA ROUGH_100M) no higher than the region median of slope-safe ground; ranked by the WORST % sunlit on the landing circle. 500 m screen, 100 m local search, full resolution at the best 3 centres",
+        "candidates": 1521,
+        "candidates_slope_ok": 12,
+        "candidates_smooth": 6,
+        "region_rough_median_m": 0.587,
+        "chosen_rough_m": 0.496,
+        "chosen_slope_mean_deg": 3.12,
+        "chosen_circle_slope_max_deg": 3.91,
+        "chosen_circle_min_sunlit_screen": 45.88,
+        "chosen_circle_mean_sunlit_screen": 52.35,
+        "chosen_pct_sunlit_screen": 55.22,
+        "chosen_full": {
+          "pct_sunlit": 55.11,
+          "pct_dte": 81.42,
+          "longest_shadow_h": 350.5
+        },
+        "best_single_pixel_screen": {
+          "lat": -83.52241,
+          "lon": -68.30045,
+          "pct_sunlit": 56.26
+        },
+        "finalists": [
+          {
+            "lat": -83.37501,
+            "lon": -67.64218,
+            "circle_min_sunlit_screen": 45.88,
+            "pct_sunlit": 55.11,
+            "pct_dte": 81.42,
+            "longest_shadow_h": 350.5
+          },
+          {
+            "lat": -83.52181,
+            "lon": -68.20846,
+            "circle_min_sunlit_screen": 41.89,
+            "pct_sunlit": 46.84,
+            "pct_dte": 69.61,
+            "longest_shadow_h": 413.5
+          },
+          {
+            "lat": -83.62335,
+            "lon": -67.5545,
+            "circle_min_sunlit_screen": 35.94,
+            "pct_sunlit": 38.77,
+            "pct_dte": 74.17,
+            "longest_shadow_h": 480.0
+          }
+        ],
+        "centre": {
+          "lat": -83.63746,
+          "lon": -68.74949,
+          "elev_m": 4491.3,
+          "slope_mean_deg": 9.18,
+          "pct_sunlit": 32.82,
+          "pct_dte": 26.36,
+          "longest_shadow_h": 530.0
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "dummy": false,
+  "t0_utc": "2026-01-01T00:00:00Z",
+  "t0_et": 820497669.18392,
+  "step_s": 1800.0,
+  "n": 87648,
+  "frame": "MOON_ME",
+  "abcorr": "LT+S",
+  "units": "km",
+  "file": "ephem.bin",
+  "layout": "float32 LE, n x [sunX,sunY,sunZ,earthX,earthY,earthZ]",
+  "time_note": "Samples are uniform in ET (TDB). UTC = t0_utc + i*step_s exactly, as long as no leap second is added in the span.",
+  "kernels": [
+    "naif0012.tls",
+    "pck00011.tpc",
+    "de440s.bsp",
+    "moon_pa_de440_200625.bpc",
+    "moon_de440_250416.tf"
+  ]
+}

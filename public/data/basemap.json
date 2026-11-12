@@ -1,0 +1,15 @@
+{
+  "image": "basemap.png",
+  "width": 834,
+  "height": 834,
+  "x_min": -200160.0,
+  "x_max": 200160.0,
+  "y_min": -200160.0,
+  "y_max": 200160.0,
+  "units": "m",
+  "projection": "+proj=stere +lat_0=-90 +lon_0=0 +k=1 +x_0=0 +y_0=0 +R=1737400",
+  "radius_m": 1737400.0,
+  "pin_formula": "rho = 2R tan(pi/4 + lat/2); x = rho sin(lon); y = rho cos(lon); col = (x - x_min)/(x_max - x_min)*width; row = (y_max - y)/(y_max - y_min)*height",
+  "orientation": "pole at the image centre; 0 E meridian points up (+y), 90 E to the right",
+  "source": "LOLA PGDA LDEM_60S_240MPP_ADJ_HILL.TIF hillshade (sun 45 deg alt / 45 deg az), Barker et al. 2023"
+}

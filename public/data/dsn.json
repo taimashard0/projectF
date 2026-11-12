@@ -1,0 +1,43 @@
+{
+  "file": "dsn.bin",
+  "layout": "uint8 per ephem sample; bit0 Goldstone, bit1 Madrid, bit2 Canberra",
+  "n": 87648,
+  "min_elevation_deg": 10.0,
+  "model": "WGS84 station coordinates (DSN 810-005) + SPICE IAU_EARTH rotation, Moon centre, LT+S",
+  "pct_any_station": 98.38,
+  "stations": [
+    {
+      "id": "goldstone",
+      "name": "Goldstone (DSS-14), USA",
+      "naif": "DSS-14",
+      "bit": 1,
+      "lat": 35.425901,
+      "lon": -116.889538,
+      "h_m": 1002.114,
+      "pct_moon_up": 41.74,
+      "hours_per_day": 10.02
+    },
+    {
+      "id": "madrid",
+      "name": "Madrid (DSS-63), Spain",
+      "naif": "DSS-63",
+      "bit": 2,
+      "lat": 40.431206,
+      "lon": -4.24799,
+      "h_m": 865.115,
+      "pct_moon_up": 40.96,
+      "hours_per_day": 9.83
+    },
+    {
+      "id": "canberra",
+      "name": "Canberra (DSS-43), Australia",
+      "naif": "DSS-43",
+      "bit": 4,
+      "lat": -35.402424,
+      "lon": 148.981267,
+      "h_m": 689.608,
+      "pct_moon_up": 41.92,
+      "hours_per_day": 10.06
+    }
+  ]
+}

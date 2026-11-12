@@ -1,0 +1,785 @@
+{
+  "generated_utc": "2026-11-05T19:56:32Z",
+  "period": "2026-01-01T00:00:00Z + 87648 x 1800.0 s",
+  "checks": [
+    {
+      "name": "Browser geometry vs NASA SPICE (azlcpo)",
+      "detail": "500 random sites 78-90 S and times 2026-2030, Sun and Earth",
+      "result": "max error 0.000027 deg elevation, 0.000002 deg azimuth",
+      "limit": "< 0.01 deg",
+      "pass": true
+    },
+    {
+      "name": "Sun at the south pole stays on the horizon",
+      "detail": "flat horizon, 2026-2030",
+      "result": "Sun elevation -1.587 .. 1.587 deg",
+      "limit": "within about +-1.6 deg",
+      "pass": true
+    },
+    {
+      "name": "Highest Sun at each site matches (90 - |lat|) + 1.54 deg",
+      "detail": "flat horizon, every site",
+      "result": "worst difference 0.046 deg",
+      "limit": "< 0.15 deg",
+      "pass": true
+    },
+    {
+      "name": "Horizon engine on synthetic terrain",
+      "detail": "flat plain (pure curvature) and one 3 km peak 60 km away",
+      "result": "matches the hand-computed angles",
+      "limit": "< 0.02 deg",
+      "pass": true
+    },
+    {
+      "name": "Shackleton crater floor is in permanent shadow",
+      "detail": "centre of Shackleton (89.67 S, 129.78 E), a known permanently shadowed region",
+      "result": "0.00% sunlit",
+      "limit": "< 1%",
+      "pass": true
+    },
+    {
+      "name": "Shackleton rim high point is among the best-lit places",
+      "detail": "literature: rim peaks lit about 80-90% of the time (Bussey et al. 2010; Mazarico et al. 2011, multi-year averages)",
+      "result": "85.2% sunlit, 2 m above the surface",
+      "limit": "60-98% (broad agreement, not an exact match)",
+      "pass": true
+    },
+    {
+      "name": "Eclipse formula (used by the website) vs SPICE gfoclt",
+      "detail": "11 eclipses 2026-2030 seen from the Moon; every 30-min sample compared",
+      "result": "80 eclipse samples, 23 with the Sun fully hidden; 0 disagreements away from event edges",
+      "limit": "0 disagreements",
+      "pass": true
+    },
+    {
+      "name": "DSN station model vs NASA precise station kernels",
+      "detail": "Moon elevation at Goldstone, Madrid, Canberra; 300 random times; ITRF93 + Earth orientation",
+      "result": "max error 0.080 deg; station positions within 1 m",
+      "limit": "< 0.1 deg (contact threshold is 10 deg, samples every 30 min)",
+      "pass": true
+    },
+    {
+      "name": "Higher mast never raises the horizon or lengthens the shadow",
+      "detail": "masks at 2, 10, 20 m for every site",
+      "result": "consistent",
+      "limit": "0 violations",
+      "pass": true
+    },
+    {
+      "name": "Shadow map: Shackleton floor is inside a permanently shadowed region",
+      "detail": "nearest-PSR distance at the crater centre (NASA PGDA LPSR map)",
+      "result": "0.0 km",
+      "limit": "0 km",
+      "pass": true
+    },
+    {
+      "name": "Our % sunlit vs NASA's published average-illumination map",
+      "detail": "Mazarico et al. 2011 maps (PGDA product 69, 18.6-year average, older 60-120 m DEM) vs ours (2026-2030, LOLA 2023 20 m DEM, 2 m above ground). Pass if ours lies inside NASA's range within 2 NASA pixels of the site, +-5 points",
+      "result": "largest gap to NASA's local range 1.1 points; largest difference from NASA's local best value 2.8 points (11 sites)",
+      "limit": "gap <= 5 points",
+      "pass": true
+    },
+    {
+      "name": "Our % Earth visible vs NASA's published Earth-visibility map",
+      "detail": "Mazarico et al. 2011 maps (PGDA product 69, 18.6-year average, older 60-120 m DEM) vs ours (2026-2030, LOLA 2023 20 m DEM, 2 m above ground). Pass if ours lies inside NASA's range within 2 NASA pixels of the site, +-5 points",
+      "result": "largest gap to NASA's local range 2.3 points; largest difference from NASA's local best value 7.7 points (11 sites)",
+      "limit": "gap <= 5 points",
+      "pass": true
+    },
+    {
+      "name": "Coarse grid method vs full-resolution site horizons",
+      "detail": "same sites computed both ways (grid: 240 m terrain, 1 deg; sites: 20 m near field, 0.5 deg)",
+      "result": "largest difference 7.5 percentage points",
+      "limit": "<= 15 points (grid is labelled approximate)",
+      "pass": true
+    },
+    {
+      "name": "Each region's chosen point lies inside NASA's region outline",
+      "detail": "9 regions (USGS McClernan 2024 outlines)",
+      "result": "all inside",
+      "limit": "all inside",
+      "pass": true
+    },
+    {
+      "name": "Each region's chosen point meets the 5 deg lander slope limit",
+      "detail": "mean slope over 100 m radius, LOLA 20 m DEM (HLS-RQMT-001: 0-5 deg)",
+      "result": "all within limit",
+      "limit": "<= 5 deg",
+      "pass": true
+    },
+    {
+      "name": "The whole 100 m landing circle is inside the region and within the slope limit",
+      "detail": "centre + 8 points at 100 m (landing margin)",
+      "result": "all circles valid",
+      "limit": "all valid",
+      "pass": true
+    },
+    {
+      "name": "Chosen points are no rougher than their region's typical slope-safe ground",
+      "detail": "LOLA ROUGH_100M (m); relative rule - NASA publishes no roughness threshold",
+      "result": "all at or below the region median",
+      "limit": "<= region median",
+      "pass": true
+    },
+    {
+      "name": "Region areas match the areas stated in NASA's region file",
+      "detail": "our converted outline area vs the file's own Area_km2 (proves the conversion is right)",
+      "result": "all match",
+      "limit": "within 1%",
+      "pass": true
+    },
+    {
+      "name": "Distance from each region to the feature it is named after (information)",
+      "detail": "names are loose (e.g. 'Peak near Cabeus B'); region placement is verified by the area match, the overlay on NASA's map and IM-2's position instead",
+      "result": "further than radius + 25 km: ['peak-near-cabeus-b (69.0 km from Cabeus B crater)']",
+      "limit": "reported, not pass/fail",
+      "pass": null
+    },
+    {
+      "name": "Region search: screening and full resolution agree at each chosen point",
+      "detail": "screening (1 deg, 60 m steps) vs full resolution (0.5 deg, 20 m) % sunlit",
+      "result": "all agree",
+      "limit": "<= 15 points",
+      "pass": true
+    }
+  ],
+  "nasa_map_comparison": [
+    {
+      "site": "im2",
+      "ours_sun_pct": 45.06,
+      "ours_earth_any_part_pct": 93.54,
+      "nasa_sun_point_pct": 46.5,
+      "nasa_sun_local_min_pct": 39.0,
+      "nasa_sun_local_max_pct": 47.0,
+      "nasa_sun_radius_m": 240.0,
+      "sun_gap_pts": 0.0,
+      "sun_vs_local_max_pts": -2.0,
+      "nasa_earth_point_pct": 91.8,
+      "nasa_earth_local_min_pct": 68.4,
+      "nasa_earth_local_max_pct": 93.4,
+      "nasa_earth_radius_m": 240.0,
+      "earth_gap_pts": 0.2,
+      "earth_vs_local_max_pts": 0.2
+    },
+    {
+      "site": "shackleton-rim",
+      "ours_sun_pct": 85.25,
+      "ours_earth_any_part_pct": 57.3,
+      "nasa_sun_point_pct": 59.0,
+      "nasa_sun_local_min_pct": 0.0,
+      "nasa_sun_local_max_pct": 85.2,
+      "nasa_sun_radius_m": 120.0,
+      "sun_gap_pts": 0.1,
+      "sun_vs_local_max_pts": 0.1,
+      "nasa_earth_point_pct": 46.5,
+      "nasa_earth_local_min_pct": 15.7,
+      "nasa_earth_local_max_pct": 55.0,
+      "nasa_earth_radius_m": 120.0,
+      "earth_gap_pts": 2.3,
+      "earth_vs_local_max_pts": 2.3
+    },
+    {
+      "site": "haworth",
+      "ours_sun_pct": 51.41,
+      "ours_earth_any_part_pct": 58.86,
+      "nasa_sun_point_pct": 49.1,
+      "nasa_sun_local_min_pct": 40.5,
+      "nasa_sun_local_max_pct": 52.3,
+      "nasa_sun_radius_m": 120.0,
+      "sun_gap_pts": 0.0,
+      "sun_vs_local_max_pts": -0.9,
+      "nasa_earth_point_pct": 58.1,
+      "nasa_earth_local_min_pct": 54.0,
+      "nasa_earth_local_max_pct": 58.3,
+      "nasa_earth_radius_m": 120.0,
+      "earth_gap_pts": 0.5,
+      "earth_vs_local_max_pts": 0.5
+    },
+    {
+      "site": "malapert-massif",
+      "ours_sun_pct": 71.51,
+      "ours_earth_any_part_pct": 73.57,
+      "nasa_sun_point_pct": 63.4,
+      "nasa_sun_local_min_pct": 48.5,
+      "nasa_sun_local_max_pct": 70.4,
+      "nasa_sun_radius_m": 120.0,
+      "sun_gap_pts": 1.1,
+      "sun_vs_local_max_pts": 1.1,
+      "nasa_earth_point_pct": 68.5,
+      "nasa_earth_local_min_pct": 53.9,
+      "nasa_earth_local_max_pct": 81.3,
+      "nasa_earth_radius_m": 120.0,
+      "earth_gap_pts": 0.0,
+      "earth_vs_local_max_pts": -7.7
+    },
+    {
+      "site": "mons-mouton",
+      "ours_sun_pct": 50.0,
+      "ours_earth_any_part_pct": 81.39,
+      "nasa_sun_point_pct": 49.4,
+      "nasa_sun_local_min_pct": 42.0,
+      "nasa_sun_local_max_pct": 50.9,
+      "nasa_sun_radius_m": 120.0,
+      "sun_gap_pts": 0.0,
+      "sun_vs_local_max_pts": -0.9,
+      "nasa_earth_point_pct": 78.6,
+      "nasa_earth_local_min_pct": 68.5,
+      "nasa_earth_local_max_pct": 80.4,
+      "nasa_earth_radius_m": 120.0,
+      "earth_gap_pts": 1.0,
+      "earth_vs_local_max_pts": 1.0
+    },
+    {
+      "site": "mons-mouton-plateau",
+      "ours_sun_pct": 54.78,
+      "ours_earth_any_part_pct": 100.0,
+      "nasa_sun_point_pct": 55.2,
+      "nasa_sun_local_min_pct": 40.6,
+      "nasa_sun_local_max_pct": 57.6,
+      "nasa_sun_radius_m": 240.0,
+      "sun_gap_pts": 0.0,
+      "sun_vs_local_max_pts": -2.8,
+      "nasa_earth_point_pct": 98.2,
+      "nasa_earth_local_min_pct": 67.1,
+      "nasa_earth_local_max_pct": 100.0,
+      "nasa_earth_radius_m": 240.0,
+      "earth_gap_pts": 0.0,
+      "earth_vs_local_max_pts": 0.0
+    },
+    {
+      "site": "nobile-rim-1",
+      "ours_sun_pct": 57.94,
+      "ours_earth_any_part_pct": 74.66,
+      "nasa_sun_point_pct": 55.3,
+      "nasa_sun_local_min_pct": 47.6,
+      "nasa_sun_local_max_pct": 57.0,
+      "nasa_sun_radius_m": 120.0,
+      "sun_gap_pts": 1.0,
+      "sun_vs_local_max_pts": 1.0,
+      "nasa_earth_point_pct": 74.2,
+      "nasa_earth_local_min_pct": 71.4,
+      "nasa_earth_local_max_pct": 75.3,
+      "nasa_earth_radius_m": 120.0,
+      "earth_gap_pts": 0.0,
+      "earth_vs_local_max_pts": -0.6
+    },
+    {
+      "site": "nobile-rim-2",
+      "ours_sun_pct": 49.83,
+      "ours_earth_any_part_pct": 73.29,
+      "nasa_sun_point_pct": 50.4,
+      "nasa_sun_local_min_pct": 46.7,
+      "nasa_sun_local_max_pct": 51.0,
+      "nasa_sun_radius_m": 240.0,
+      "sun_gap_pts": 0.0,
+      "sun_vs_local_max_pts": -1.1,
+      "nasa_earth_point_pct": 70.2,
+      "nasa_earth_local_min_pct": 63.4,
+      "nasa_earth_local_max_pct": 74.8,
+      "nasa_earth_radius_m": 240.0,
+      "earth_gap_pts": 0.0,
+      "earth_vs_local_max_pts": -1.5
+    },
+    {
+      "site": "de-gerlache-rim-2",
+      "ours_sun_pct": 56.79,
+      "ours_earth_any_part_pct": 59.62,
+      "nasa_sun_point_pct": 57.2,
+      "nasa_sun_local_min_pct": 44.5,
+      "nasa_sun_local_max_pct": 58.1,
+      "nasa_sun_radius_m": 120.0,
+      "sun_gap_pts": 0.0,
+      "sun_vs_local_max_pts": -1.3,
+      "nasa_earth_point_pct": 58.7,
+      "nasa_earth_local_min_pct": 54.7,
+      "nasa_earth_local_max_pct": 59.1,
+      "nasa_earth_radius_m": 120.0,
+      "earth_gap_pts": 0.5,
+      "earth_vs_local_max_pts": 0.5
+    },
+    {
+      "site": "slater-plain",
+      "ours_sun_pct": 62.75,
+      "ours_earth_any_part_pct": 50.58,
+      "nasa_sun_point_pct": 55.3,
+      "nasa_sun_local_min_pct": 46.3,
+      "nasa_sun_local_max_pct": 62.0,
+      "nasa_sun_radius_m": 120.0,
+      "sun_gap_pts": 0.7,
+      "sun_vs_local_max_pts": 0.7,
+      "nasa_earth_point_pct": 45.0,
+      "nasa_earth_local_min_pct": 38.0,
+      "nasa_earth_local_max_pct": 49.9,
+      "nasa_earth_radius_m": 120.0,
+      "earth_gap_pts": 0.7,
+      "earth_vs_local_max_pts": 0.7
+    },
+    {
+      "site": "peak-near-cabeus-b",
+      "ours_sun_pct": 55.14,
+      "ours_earth_any_part_pct": 90.61,
+      "nasa_sun_point_pct": 53.9,
+      "nasa_sun_local_min_pct": 39.0,
+      "nasa_sun_local_max_pct": 54.8,
+      "nasa_sun_radius_m": 240.0,
+      "sun_gap_pts": 0.4,
+      "sun_vs_local_max_pts": 0.4,
+      "nasa_earth_point_pct": 79.8,
+      "nasa_earth_local_min_pct": 49.3,
+      "nasa_earth_local_max_pct": 94.8,
+      "nasa_earth_radius_m": 240.0,
+      "earth_gap_pts": 0.0,
+      "earth_vs_local_max_pts": -4.2
+    }
+  ],
+  "nasa_map_sources": [
+    "AVGVISIB_75S_120M_201608.TIF",
+    "AVGVISIB_75S_120M_201608_COG.TIF",
+    "AVGVISIB_75S_120M_201608_EARTH.TIF",
+    "AVGVISIB_75S_120M_201608_EARTH_COG.TIF",
+    "AVGVISIB_85S_060M_201608.TIF",
+    "AVGVISIB_85S_060M_201608_COG.TIF",
+    "AVGVISIB_85S_060M_201608_EARTH.TIF",
+    "AVGVISIB_85S_060M_201608_EARTH_COG.TIF"
+  ],
+  "artemis_regions": [
+    {
+      "region": "haworth",
+      "area_km2": 888.0,
+      "official_area_km2": 888.04,
+      "point_sunlit_pct": 51.35,
+      "circle_worst_sunlit_pct": 49.98,
+      "single_best_pixel_pct": 65.72,
+      "centre_sunlit_pct": 10.84,
+      "slope_deg": 3.32,
+      "rough_m": 0.469,
+      "region_rough_median_m": 0.516,
+      "namesake_km": 31.6
+    },
+    {
+      "region": "malapert-massif",
+      "area_km2": 441.0,
+      "official_area_km2": 441.0,
+      "point_sunlit_pct": 71.18,
+      "circle_worst_sunlit_pct": 54.06,
+      "single_best_pixel_pct": 73.03,
+      "centre_sunlit_pct": 21.19,
+      "slope_deg": 2.84,
+      "rough_m": 0.48,
+      "region_rough_median_m": 0.592,
+      "namesake_km": 45.7
+    },
+    {
+      "region": "mons-mouton",
+      "area_km2": 256.0,
+      "official_area_km2": 256.0,
+      "point_sunlit_pct": 50.02,
+      "circle_worst_sunlit_pct": 48.38,
+      "single_best_pixel_pct": 57.81,
+      "centre_sunlit_pct": 20.91,
+      "slope_deg": 4.86,
+      "rough_m": 0.445,
+      "region_rough_median_m": 0.466,
+      "namesake_km": 25.2
+    },
+    {
+      "region": "mons-mouton-plateau",
+      "area_km2": 4451.8,
+      "official_area_km2": 4451.83602,
+      "point_sunlit_pct": 54.79,
+      "circle_worst_sunlit_pct": 54.54,
+      "single_best_pixel_pct": 72.55,
+      "centre_sunlit_pct": 24.61,
+      "slope_deg": 3.02,
+      "rough_m": 0.331,
+      "region_rough_median_m": 0.47,
+      "namesake_km": 8.2
+    },
+    {
+      "region": "nobile-rim-1",
+      "area_km2": 400.0,
+      "official_area_km2": 400.0,
+      "point_sunlit_pct": 57.92,
+      "circle_worst_sunlit_pct": 55.48,
+      "single_best_pixel_pct": 73.19,
+      "centre_sunlit_pct": 29.97,
+      "slope_deg": 3.15,
+      "rough_m": 0.331,
+      "region_rough_median_m": 0.485,
+      "namesake_km": 39.3
+    },
+    {
+      "region": "nobile-rim-2",
+      "area_km2": 400.0,
+      "official_area_km2": 400.0,
+      "point_sunlit_pct": 49.78,
+      "circle_worst_sunlit_pct": 48.64,
+      "single_best_pixel_pct": 51.54,
+      "centre_sunlit_pct": 40.88,
+      "slope_deg": 1.67,
+      "rough_m": 0.331,
+      "region_rough_median_m": 0.486,
+      "namesake_km": 43.2
+    },
+    {
+      "region": "de-gerlache-rim-2",
+      "area_km2": 400.0,
+      "official_area_km2": 400.0,
+      "point_sunlit_pct": 56.74,
+      "circle_worst_sunlit_pct": 53.48,
+      "single_best_pixel_pct": 64.46,
+      "centre_sunlit_pct": 36.47,
+      "slope_deg": 1.36,
+      "rough_m": 0.39,
+      "region_rough_median_m": 0.452,
+      "namesake_km": 20.9
+    },
+    {
+      "region": "slater-plain",
+      "area_km2": 399.8,
+      "official_area_km2": 399.800025,
+      "point_sunlit_pct": 62.77,
+      "circle_worst_sunlit_pct": 52.76,
+      "single_best_pixel_pct": 63.77,
+      "centre_sunlit_pct": 1.89,
+      "slope_deg": 1.95,
+      "rough_m": 0.309,
+      "region_rough_median_m": 0.474,
+      "namesake_km": 32.9
+    },
+    {
+      "region": "peak-near-cabeus-b",
+      "area_km2": 399.8,
+      "official_area_km2": 399.800025,
+      "point_sunlit_pct": 55.11,
+      "circle_worst_sunlit_pct": 45.88,
+      "single_best_pixel_pct": 56.26,
+      "centre_sunlit_pct": 32.82,
+      "slope_deg": 3.12,
+      "rough_m": 0.496,
+      "region_rough_median_m": 0.587,
+      "namesake_km": 69.0
+    }
+  ],
+  "im2_vs_regions": {
+    "mons-mouton": 11.99,
+    "mons-mouton-plateau": 0.0
+  },
+  "webgeocalc_cases": [
+    {
+      "site": "im2",
+      "lat": -84.7906,
+      "lon": 29.1957,
+      "height_km": 5.3219,
+      "utc": "2026-01-01T00:00:00",
+      "target": "SUN",
+      "frame": "MOON_ME",
+      "abcorr": "LT+S",
+      "az_deg": 3.3447,
+      "el_deg": 6.5463
+    },
+    {
+      "site": "im2",
+      "lat": -84.7906,
+      "lon": 29.1957,
+      "height_km": 5.3219,
+      "utc": "2026-01-01T00:00:00",
+      "target": "EARTH",
+      "frame": "MOON_ME",
+      "abcorr": "LT+S",
+      "az_deg": 329.1139,
+      "el_deg": 10.7658
+    },
+    {
+      "site": "im2",
+      "lat": -84.7906,
+      "lon": 29.1957,
+      "height_km": 5.3219,
+      "utc": "2028-07-02T00:00:00",
+      "target": "SUN",
+      "frame": "MOON_ME",
+      "abcorr": "LT+S",
+      "az_deg": 33.4093,
+      "el_deg": 4.0045
+    },
+    {
+      "site": "im2",
+      "lat": -84.7906,
+      "lon": 29.1957,
+      "height_km": 5.3219,
+      "utc": "2028-07-02T00:00:00",
+      "target": "EARTH",
+      "frame": "MOON_ME",
+      "abcorr": "LT+S",
+      "az_deg": 335.885,
+      "el_deg": -1.9077
+    }
+  ],
+  "sites": {
+    "im2": {
+      "pct_sunlit": 45.01,
+      "pct_sunlit_no_eclipse": 45.06,
+      "pct_dte": 81.43,
+      "pct_earth_any_part": 93.54,
+      "longest_shadow_h": 458.5,
+      "longest_shadow_no_eclipse_h": 458.5,
+      "longest_blackout_h": 146.0,
+      "sun_el_max_flat_deg": 6.783,
+      "pct_dsn_link": 80.3,
+      "longest_dsn_blackout_h": 146.0,
+      "by_mast": {
+        "2": {
+          "longest_shadow_h": 458.5
+        },
+        "10": {
+          "longest_shadow_h": 457.5
+        },
+        "20": {
+          "longest_shadow_h": 456.0
+        }
+      },
+      "pct_sunlit_grid_method": 45.15
+    },
+    "shackleton-rim": {
+      "pct_sunlit": 85.2,
+      "pct_sunlit_no_eclipse": 85.25,
+      "pct_dte": 52.77,
+      "pct_earth_any_part": 57.3,
+      "longest_shadow_h": 119.5,
+      "longest_shadow_no_eclipse_h": 119.5,
+      "longest_blackout_h": 333.5,
+      "sun_el_max_flat_deg": 1.749,
+      "pct_dsn_link": 52.36,
+      "longest_dsn_blackout_h": 333.5,
+      "by_mast": {
+        "2": {
+          "longest_shadow_h": 119.5
+        },
+        "10": {
+          "longest_shadow_h": 68.5
+        },
+        "20": {
+          "longest_shadow_h": 67.5
+        }
+      },
+      "pct_sunlit_grid_method": 77.73
+    },
+    "haworth": {
+      "pct_sunlit": 51.35,
+      "pct_sunlit_no_eclipse": 51.41,
+      "pct_dte": 54.22,
+      "pct_earth_any_part": 58.86,
+      "longest_shadow_h": 387.0,
+      "longest_shadow_no_eclipse_h": 387.0,
+      "longest_blackout_h": 332.0,
+      "sun_el_max_flat_deg": 4.645,
+      "pct_dsn_link": 53.79,
+      "longest_dsn_blackout_h": 332.0,
+      "by_mast": {
+        "2": {
+          "longest_shadow_h": 387.0
+        },
+        "10": {
+          "longest_shadow_h": 382.0
+        },
+        "20": {
+          "longest_shadow_h": 381.5
+        }
+      },
+      "pct_sunlit_grid_method": 51.65
+    },
+    "malapert-massif": {
+      "pct_sunlit": 71.46,
+      "pct_sunlit_no_eclipse": 71.51,
+      "pct_dte": 67.98,
+      "pct_earth_any_part": 73.57,
+      "longest_shadow_h": 404.0,
+      "longest_shadow_no_eclipse_h": 404.0,
+      "longest_blackout_h": 234.5,
+      "sun_el_max_flat_deg": 5.594,
+      "pct_dsn_link": 67.23,
+      "longest_dsn_blackout_h": 234.5,
+      "by_mast": {
+        "2": {
+          "longest_shadow_h": 404.0
+        },
+        "10": {
+          "longest_shadow_h": 261.5
+        },
+        "20": {
+          "longest_shadow_h": 261.5
+        }
+      },
+      "pct_sunlit_grid_method": 78.62
+    },
+    "mons-mouton": {
+      "pct_sunlit": 49.95,
+      "pct_sunlit_no_eclipse": 50.0,
+      "pct_dte": 74.49,
+      "pct_earth_any_part": 81.39,
+      "longest_shadow_h": 436.0,
+      "longest_shadow_no_eclipse_h": 436.0,
+      "longest_blackout_h": 192.5,
+      "sun_el_max_flat_deg": 6.104,
+      "pct_dsn_link": 73.58,
+      "longest_dsn_blackout_h": 192.5,
+      "by_mast": {
+        "2": {
+          "longest_shadow_h": 436.0
+        },
+        "10": {
+          "longest_shadow_h": 432.5
+        },
+        "20": {
+          "longest_shadow_h": 430.0
+        }
+      },
+      "pct_sunlit_grid_method": 53.05
+    },
+    "mons-mouton-plateau": {
+      "pct_sunlit": 54.73,
+      "pct_sunlit_no_eclipse": 54.78,
+      "pct_dte": 100.0,
+      "pct_earth_any_part": 100.0,
+      "longest_shadow_h": 365.0,
+      "longest_shadow_no_eclipse_h": 365.0,
+      "longest_blackout_h": 0.0,
+      "sun_el_max_flat_deg": 6.907,
+      "pct_dsn_link": 98.38,
+      "longest_dsn_blackout_h": 1.5,
+      "by_mast": {
+        "2": {
+          "longest_shadow_h": 365.0
+        },
+        "10": {
+          "longest_shadow_h": 342.5
+        },
+        "20": {
+          "longest_shadow_h": 342.5
+        }
+      },
+      "pct_sunlit_grid_method": 57.97
+    },
+    "nobile-rim-1": {
+      "pct_sunlit": 57.89,
+      "pct_sunlit_no_eclipse": 57.94,
+      "pct_dte": 68.97,
+      "pct_earth_any_part": 74.66,
+      "longest_shadow_h": 372.5,
+      "longest_shadow_no_eclipse_h": 372.5,
+      "longest_blackout_h": 229.0,
+      "sun_el_max_flat_deg": 6.278,
+      "pct_dsn_link": 68.21,
+      "longest_dsn_blackout_h": 229.0,
+      "by_mast": {
+        "2": {
+          "longest_shadow_h": 372.5
+        },
+        "10": {
+          "longest_shadow_h": 329.5
+        },
+        "20": {
+          "longest_shadow_h": 304.5
+        }
+      },
+      "pct_sunlit_grid_method": 63.84
+    },
+    "nobile-rim-2": {
+      "pct_sunlit": 49.78,
+      "pct_sunlit_no_eclipse": 49.83,
+      "pct_dte": 67.64,
+      "pct_earth_any_part": 73.29,
+      "longest_shadow_h": 408.0,
+      "longest_shadow_no_eclipse_h": 408.0,
+      "longest_blackout_h": 240.0,
+      "sun_el_max_flat_deg": 7.975,
+      "pct_dsn_link": 66.88,
+      "longest_dsn_blackout_h": 240.0,
+      "by_mast": {
+        "2": {
+          "longest_shadow_h": 408.0
+        },
+        "10": {
+          "longest_shadow_h": 404.5
+        },
+        "20": {
+          "longest_shadow_h": 400.0
+        }
+      },
+      "pct_sunlit_grid_method": 50.07
+    },
+    "de-gerlache-rim-2": {
+      "pct_sunlit": 56.74,
+      "pct_sunlit_no_eclipse": 56.79,
+      "pct_dte": 55.02,
+      "pct_earth_any_part": 59.62,
+      "longest_shadow_h": 452.0,
+      "longest_shadow_no_eclipse_h": 452.0,
+      "longest_blackout_h": 327.0,
+      "sun_el_max_flat_deg": 3.412,
+      "pct_dsn_link": 54.59,
+      "longest_dsn_blackout_h": 327.0,
+      "by_mast": {
+        "2": {
+          "longest_shadow_h": 452.0
+        },
+        "10": {
+          "longest_shadow_h": 452.0
+        },
+        "20": {
+          "longest_shadow_h": 451.0
+        }
+      },
+      "pct_sunlit_grid_method": 56.9
+    },
+    "slater-plain": {
+      "pct_sunlit": 62.75,
+      "pct_sunlit_no_eclipse": 62.75,
+      "pct_dte": 46.05,
+      "pct_earth_any_part": 50.58,
+      "longest_shadow_h": 385.5,
+      "longest_shadow_no_eclipse_h": 385.5,
+      "longest_blackout_h": 379.5,
+      "sun_el_max_flat_deg": 4.277,
+      "pct_dsn_link": 45.75,
+      "longest_dsn_blackout_h": 379.5,
+      "by_mast": {
+        "2": {
+          "longest_shadow_h": 385.5
+        },
+        "10": {
+          "longest_shadow_h": 347.5
+        },
+        "20": {
+          "longest_shadow_h": 347.5
+        }
+      },
+      "pct_sunlit_grid_method": 62.19
+    },
+    "peak-near-cabeus-b": {
+      "pct_sunlit": 55.09,
+      "pct_sunlit_no_eclipse": 55.14,
+      "pct_dte": 81.08,
+      "pct_earth_any_part": 90.61,
+      "longest_shadow_h": 350.5,
+      "longest_shadow_no_eclipse_h": 350.5,
+      "longest_blackout_h": 172.0,
+      "sun_el_max_flat_deg": 8.181,
+      "pct_dsn_link": 80.03,
+      "longest_dsn_blackout_h": 172.0,
+      "by_mast": {
+        "2": {
+          "longest_shadow_h": 350.5
+        },
+        "10": {
+          "longest_shadow_h": 340.0
+        },
+        "20": {
+          "longest_shadow_h": 335.5
+        }
+      },
+      "pct_sunlit_grid_method": 54.2
+    }
+  },
+  "all_pass": true
+}
